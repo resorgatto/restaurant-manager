@@ -1,13 +1,33 @@
-class restaurante: 
-    nome = ""
-    categoria = ""
-    ativo = False
+class Restaurante: 
+    
+    restaurantes = []
+    
+    def __init__(self, nome, categoria):
+        self._nome = nome.title()
+        self._categoria = categoria.upper()
+        self._ativo = False #o underline indica que o "ativo" é privado, então as pessoas terão que usar a propriedade (property)
+        Restaurante.restaurantes.append(self)
+    
+    def __str__(self): #em formato de string
+        return f"{self._nome} | {self._categoria}"
+    
+    @classmethod
+    def listar_restaurantes(cls):
+        print(f"{"Nome do Restaurante".ljust(25)} | {"Categoria".ljust(25)} | {"Status"}")
+        for restaurante in cls.restaurantes:
+            print(f"{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {restaurante._ativo}")
+        
+    @property #modificar como o atributo será lido
+    def ativo(self):
+        return "✔️" if self._ativo else "❌"
 
-restaurante_snake = restaurante()
-restaurante_snake.nome = "Snake"
-restaurante_snake.categoria = "Japonesa"
-restaurante_renato = restaurante()
+    def alternar_estado(self):
+        self._ativo = not self._ativo
+        
 
-restaurantes = [restaurante_snake, restaurante_renato]
+restaurante_snake = Restaurante("snake", "Japonesa")
+restaurante_snake.alternar_estado()
+restaurante_renato = Restaurante("renato", "Lanches")
 
-print (restaurantes)
+
+Restaurante.listar_restaurantes()
