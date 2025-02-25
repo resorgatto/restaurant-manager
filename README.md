@@ -1,23 +1,30 @@
-# Gerenciador de Restaurantes 🍽️
+# 📌 Gerenciador de Restaurantes  
 
-Um aplicativo simples em Python para cadastro e gerenciamento de restaurantes.
+Este é um sistema simples para gerenciar restaurantes, permitindo cadastrar novos estabelecimentos, listar os cadastrados e alternar seu status entre ativo e inativo.  
 
-## 📌 Funcionalidades
+## 🚀 Tecnologias Utilizadas  
+- Python  
 
-- ✅ Cadastrar novos restaurantes
-- ✅ Listar restaurantes cadastrados
-- ✅ Ativar/desativar restaurantes
+## 📂 Estrutura do Projeto  
+- `app.py` → Script principal que executa o menu interativo do sistema.  
+- `restaurante.py` → Classe Restaurante com funcionalidades para manipulação de objetos de restaurantes.  
 
-## 🚀 Como usar
+## ⚙️ Funcionalidades  
+- 📌 **Cadastro de Restaurantes** → Adicione novos restaurantes com nome e categoria.  
+- 📋 **Listagem de Restaurantes** → Exibe os restaurantes cadastrados e seu status.  
+- 🔄 **Alteração de Status** → Ative ou desative um restaurante.  
 
-1. Certifique-se de ter o Python instalado.
-2. Execute o script `app.py`.
-3. Escolha uma opção no menu interativo.
-4. Gerencie os restaurantes cadastrados.
+## ▶️ Como Executar  
+```sh
+# Clone o repositório
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
 
-## 🛠️ Tecnologias
+# Acesse a pasta do projeto
+cd nome-do-repositorio
 
-- 🔹 Python (com manipulação de listas e classes)
-- 🔹 Interface de linha de comando (CLI)
+# Execute o script principal
+python app.py
+```
 
-Sinta-se à vontade para contribuir ou aprimorar! 🚀
+## 📌 Observação  
+Este é um projeto simples para aprendizado e pode ser expandido com novas funcionalidades, como persistência de dados e interface gráfica.  
